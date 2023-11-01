@@ -13,13 +13,15 @@
      <h1>Application > formulaire_4</h1>
 
     <h:form>
+        <!-- Étiquette de sortie pour le champ de saisie -->
         <h:outputLabel value="Entrez un nombre" for="nombre"/>
+        <!-- Champ de saisie lié à la propriété "nombre" du bean "bean2" -->
         <h:inputText id="nombre" value="#{bean2.nombre}"/>
+        <!-- Bouton pour soumettre le formulaire et déclencher l'action "afficher" -->
         <h:commandButton value="Valider" action="#{bean2.afficher()}"/>
     </h:form>
 
- 
-
+    <!-- Section de métadonnées pour extraire le paramètre "nb" de l'URL et l'assigner à "bean2.nombre" -->
     <f:metadata>
         <f:viewParam name="nb" value="#{bean2.nombre}"/>
     </f:metadata>
